@@ -9,24 +9,25 @@
     tools:context=".BMIActivity">
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:id="@+id/imageview"
-        android:layout_above="@id/contentlayout"
-        android:layout_marginBottom="30dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ok">
+    <!--    <ImageView-->
+<!--        android:id="@+id/imageview"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/contentlayout"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginEnd="321dp"-->
+<!--        android:layout_marginBottom="248dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:src="@drawable/ok">-->
 
-    </ImageView>
+<!--    </ImageView>-->
+
 
 
     <RelativeLayout
         android:id="@+id/contentlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:background="@drawable/cardbackgroung"
         android:padding="10dp">
 
@@ -72,34 +73,54 @@
 
     </RelativeLayout>
 
-
     <android.widget.Button
         android:id="@+id/gotomain"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="80dp"
         android:layout_below="@id/contentlayout"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="103dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/buttonbackground"
         android:text="Пересчитатьтвой BMI"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        tools:ignore="NotSibling"></android.widget.Button>
 
-    </android.widget.Button>
-
-    <Button
-        android:id="@+id/buttonExit"
+    <android.widget.Button
+        android:id="@+id/buttonGoToGoodList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/gotomain"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginBottom="102dp"
-        android:text="EXIT" />
+        android:layout_height="80dp"
+        android:layout_below="@id/contentlayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/buttonbackground"
+        android:text="Список продуктов для вас"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="InvalidId,NotSibling"></android.widget.Button>
+
+    <!--    <android.widget.Button-->
+<!--        android:id="@+id/goToList"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_below="@id/contentlayout"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/buttonbackground"-->
+<!--        android:text="Exit"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:ignore="NotSibling">-->
+
+<!--    </android.widget.Button>-->
+
+
 
 
 </RelativeLayout>

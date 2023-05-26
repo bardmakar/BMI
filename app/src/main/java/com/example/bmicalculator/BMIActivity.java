@@ -21,6 +21,8 @@ public class BMIActivity extends AppCompatActivity {
     TextView mbmidisplay,magedisplay,mweightdisplay,mheightdisplay,mbmicategory,mgender;
     Button mgotomain;
     Intent intent;
+    Button buttonGoToGoodList;
+    Button gotomain;
 
     ImageView mimageview;
     String mbmi;
@@ -43,7 +45,7 @@ public class BMIActivity extends AppCompatActivity {
         ColorDrawable colorDrawable=new ColorDrawable(Color.parseColor("#1E1D1D"));
         getSupportActionBar().setBackgroundDrawable(colorDrawable);
 
-;
+
 
 
         getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
@@ -56,7 +58,11 @@ public class BMIActivity extends AppCompatActivity {
         mbmicategory = findViewById(R.id.bmicategorydispaly);
         mgotomain=findViewById(R.id.gotomain);
 
-        mimageview=findViewById(R.id.imageview);
+//        mimageview=findViewById(R.id.imageview);
+
+        buttonGoToGoodList = findViewById(R.id.buttonGoToGoodList);
+        gotomain = findViewById(R.id.gotomain);
+
 
         mgender=findViewById(R.id.genderdisplay);
         mbackground=findViewById(R.id.contentlayout);
@@ -76,46 +82,52 @@ public class BMIActivity extends AppCompatActivity {
         mbmi=Float.toString(intbmi);
         System.out.println(mbmi);
 
+
+
+
+
+
+
         if(intbmi<16) {
             mbmicategory.setText("Severe Thinness");
             mbackground.setBackgroundColor(Color.RED);
-            mimageview.setImageResource(R.drawable.crosss);
+//            mimageview.setImageResource(R.drawable.crosss);
 
 
         }
         else if(intbmi<16.9 && intbmi>16) {
             mbmicategory.setText("Moderate Thinness");
             mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+//            mimageview.setImageResource(R.drawable.warning);
 
         }
         else if(intbmi<18.4 && intbmi>17) {
             mbmicategory.setText("Mild Thinness");
             mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+//            mimageview.setImageResource(R.drawable.warning);
 
         }
         else if(intbmi<24.9 && intbmi>18.5 ) {
             mbmicategory.setText("Normal");
-            mimageview.setImageResource(R.drawable.ok);
+//            mimageview.setImageResource(R.drawable.ok);
 
         }
         else if(intbmi <29.9 && intbmi>25) {
             mbmicategory.setText("Overweight");
             mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+//            mimageview.setImageResource(R.drawable.warning);
 
         }
         else if(intbmi<34.9 && intbmi>30) {
             mbmicategory.setText("Obese Class I");
             mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+//            mimageview.setImageResource(R.drawable.warning);
 
         }
         else {
             mbmicategory.setText("Obese Class II");
             mbackground.setBackgroundColor(R.color.warn);
-            mimageview.setImageResource(R.drawable.crosss);
+//            mimageview.setImageResource(R.drawable.crosss);
         }
 
         mgender.setText(intent.getStringExtra("gender"));
@@ -130,10 +142,21 @@ public class BMIActivity extends AppCompatActivity {
             }
         });
 
+        buttonGoToGoodList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HealthyFoodActivity.class);
+                startActivity(intent);
+            }
+        });
 
-
-
-
+        gotomain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent1);
+            }
+        });
 
 
     }
