@@ -41,8 +41,7 @@ public class FullFoodsActivity extends AppCompatActivity {
         buttonGoBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HealthyFoodActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 

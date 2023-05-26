@@ -37,8 +37,7 @@ public class HealthyFoodActivity extends AppCompatActivity {
         buttonGoBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(), BMIActivity.class);
-                startActivity(intent2);
+                finish();
             }
         });
 

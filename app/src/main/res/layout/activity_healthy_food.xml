@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/background"
     android:layout_height="match_parent"
-    tools:context=".HealthyFoodActivity">
+    tools:context=".HealthyFoodActivity"
+    android:orientation="vertical"
+    >
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/buttonGoToFullList"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="711dp"
+        android:layout_weight="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="InvalidId" />
@@ -22,33 +22,25 @@
         android:id="@+id/buttonGoBackView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@id/contentlayout"
         android:layout_marginBottom="4dp"
         android:background="@drawable/buttonbackground"
         android:text="Вернуться назад"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="InvalidId,NotSibling"></android.widget.Button>
+        tools:ignore="InvalidId,NotSibling"
+        android:layout_weight="0.1"/>
 
     <android.widget.Button
         android:id="@+id/buttonGoToFullList"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@id/contentlayout"
         android:layout_marginBottom="100dp"
         android:background="@drawable/buttonbackground"
         android:text="Список всех продуктов"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="InvalidId,NotSibling"></android.widget.Button>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:ignore="InvalidId,NotSibling"
+        android:layout_weight="0.1"/>
+</LinearLayout>
