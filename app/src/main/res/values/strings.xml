@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="unit">См</string>
+    <string name="femaletext">Женщина</string>
+    <string name="age">Возраст</string>
+    <string name="startingheight">170</string>
+    <string name="startingweight">55</string>
+    <string name="startingage">22</string>
+    <string name="todo">TODO</string>
+    <string name="height">Рост</string>
+    <string name="calculate_your_bmi">Показать результаты</string>
+    <string name="weight">Вес</string>
+    <string name="male">Мужчина</string>
+
+</resources>
